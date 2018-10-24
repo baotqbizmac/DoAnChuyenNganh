@@ -22,3 +22,31 @@ select,
 textarea {
     max-width: 280px;
 }
+
+th.current-question {
+    text-decoration: none;
+    background-color: #3380CB;
+    border: #fff solid 2px;
+    color: #fff;
+}
+
+div.question label {
+    text-decoration: none;
+    background-color: #F9A8FF;
+    border: #fff solid 2px;
+    color: #000000;
+}
+
+input.correct-answer {
+    text-decoration: none;
+    background-color: #BCFFA8;
+    border: #fff solid 2px;
+    color: #000000;
+}
+
+input.wrong-answer {
+    text-decoration: none;
+    background-color: #FF7651;
+    border: #fff solid 2px;
+    color: #000000;
+}
