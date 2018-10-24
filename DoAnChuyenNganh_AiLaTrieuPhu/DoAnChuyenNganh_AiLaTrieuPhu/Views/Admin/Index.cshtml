@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h4 class="page-title">Add question</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            <form class="form-horizontal form-material">
+                <h3 class="box-title">Add</h3>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="col-md-12">Tên Câu hỏi</label>
+                            <div class="col-md-12">
+                                <input type="text" placeholder="Question" class="form-control form-control-line">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-6">
+                                <label class="col-md-12">Đáp án A</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Question A" class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="col-md-12">Đáp án B</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Question B" class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="col-md-12">Đáp án C</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Question C" class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="col-md-12">Đáp án D</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Question D" class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="col-md-12">Chọn đáp án đúng</label>
+                                <div class="col-md-12">
+                                    <select class="form-control form-control-line">
+                                        <option>Đáp án A</option>
+                                        <option>Đáp án B</option>
+                                        <option>Đáp án C</option>
+                                        <option>Đáp án D</option>
+                                    </select>
+                                </div>
+                            </div> 
+                            <div class="col-sm-12"><br />
+                                <button class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@*-------------------------------------*@
+@*table câu hỏi*@
+<div class="col-md-12 col-lg-12 col-sm-12">
+    <div class="white-box">
+
+        <h3 class="box-title">Question</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>NAME</th>
+                        <th>STATUS</th>
+                        <th>DATE</th>
+                        <th>PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="txt-oflo">Elite admin</td>
+                        <td>SALE</td>
+                        <td class="txt-oflo">April 18, 2017</td>
+                        <td><span class="text-success">$24</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="txt-oflo">Real Homes WP Theme</td>
+                        <td>EXTENDED</td>
+                        <td class="txt-oflo">April 19, 2017</td>
+                        <td><span class="text-info">$1250</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="txt-oflo">Ample Admin</td>
+                        <td>EXTENDED</td>
+                        <td class="txt-oflo">April 19, 2017</td>
+                        <td><span class="text-info">$1250</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="txt-oflo">Medical Pro WP Theme</td>
+                        <td>TAX</td>
+                        <td class="txt-oflo">April 20, 2017</td>
+                        <td><span class="text-danger">-$24</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="txt-oflo">Hosting press html</td>
+                        <td>SALE</td>
+                        <td class="txt-oflo">April 21, 2017</td>
+                        <td><span class="text-success">$24</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="txt-oflo">Digital Agency PSD</td>
+                        <td>SALE</td>
+                        <td class="txt-oflo">April 23, 2017</td>
+                        <td><span class="text-danger">-$14</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="txt-oflo">Helping Hands WP Theme</td>
+                        <td>MEMBER</td>
+                        <td class="txt-oflo">April 22, 2017</td>
+                        <td><span class="text-success">$64</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
