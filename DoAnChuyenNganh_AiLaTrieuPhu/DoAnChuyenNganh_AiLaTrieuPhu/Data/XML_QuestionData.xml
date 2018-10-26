@@ -1,15 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Questions>
-  <Question level="1" value="Đây là câu hỏi 1">
-    <Ans correct="true">Đáp án A</Ans>
-    <Ans correct="false">Đáp án B</Ans>
-    <Ans correct="false">Đáp án C</Ans>
-    <Ans correct="false">Đáp án D</Ans>
-  </Question>
-  <Question level="1" value="Đây là câu hỏi 2">
+  <Question id="39653665.1228" level="2" value="Câu hỏi 3">
     <Ans correct="false">Đáp án A</Ans>
-    <Ans correct="true">Đáp án B</Ans>
-    <Ans correct="false">Đáp án C</Ans>
+    <Ans correct="false">Đáp án B</Ans>
+    <Ans correct="true">Đáp án C</Ans>
     <Ans correct="false">Đáp án D</Ans>
   </Question>
 </Questions>
