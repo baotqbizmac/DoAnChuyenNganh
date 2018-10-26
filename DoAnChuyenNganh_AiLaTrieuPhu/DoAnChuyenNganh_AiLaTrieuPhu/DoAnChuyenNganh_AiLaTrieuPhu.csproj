@@ -153,7 +153,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\QuestionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\XmlDataReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -461,6 +463,7 @@
     <Content Include="Content\CssAdmin\plugins\images\users\ritesh.jpg" />
     <Content Include="Content\CssAdmin\plugins\images\users\sonu.jpg" />
     <Content Include="Content\CssAdmin\plugins\images\users\varun.jpg" />
+    <Content Include="Data\XML_QuestionData.xml" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -775,7 +778,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\XmlDataReader\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
