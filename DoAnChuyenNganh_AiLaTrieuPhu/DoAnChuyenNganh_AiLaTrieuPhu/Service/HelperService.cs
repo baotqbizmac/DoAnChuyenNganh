@@ -9,7 +9,6 @@ namespace DoAnChuyenNganh_AiLaTrieuPhu.Service
     {
         //Trợ giúp 50/50
         //Truyền vào đáp án đúng, trả về đáp án bị loại bỏ
-        //Đáp án đúng nằm trong khoảng 1-4
         public int FiftyHelp(int correctAnswer)
         {
             if (correctAnswer < 1 || correctAnswer > 4)
@@ -23,34 +22,61 @@ namespace DoAnChuyenNganh_AiLaTrieuPhu.Service
             return answerRemoved;
         }
 
-        //Trợ giúp gọi điện thoại cho người thân
-        //Truyền vầo đáp án đúng, trả về đáp án người thân chọn
-        //Đáp án đúng nằm trong khoảng 1-4
+        //Trợ giúp hỏi ý kiến khán giả
+        //Truyền vầo đáp án đúng, trả về danh sách tỷ lệ
         //Các đáp án sẽ random tỷ lệ 1-100, riêng đáp án đúng tỷ lệ từ 30-100
         //Tổng tỷ lệ 4 đáp án đúng = 100
-        public List<int> CallToRelatives(int correctAnswer)
+        public int[] AskAudience(int correctAnswer)
         {
-            List<int> ratios = new List<int>(); //Thứ tự tỷ lệ của các đáp án: A-B-C-D
+            int[] ratios = { 0, 0, 0, 0 };
             if (correctAnswer < 1 || correctAnswer > 4)
                 return ratios;
+            int max = 80;
             Random rd = new Random();
-            int maxRatio = 100; //Tổng tỷ lệ các đáp án = 100
             for (int i = 1; i < 5; i++)
             {
-                int ratio;
+                int random = rd.Next(0, max);
                 if (i == correctAnswer)
-                {
-                    ratio = rd.Next(30, maxRatio);
-                }
+                    ratios[i] += 20 + random;
                 else
-                {
-                    ratio = rd.Next(0, maxRatio);
-                }
-                ratios.Add(ratio);
-                maxRatio -= ratio;
+                    ratios[i] += random;
+                max -= random;
             }
+            ratios[correctAnswer] += max;
             return ratios;
         }
 
+        //Trợ giúp gọi điện người thân
+        //Truyền vào đáp án đúng, trả về đáp án có tỷ lệ cao nhất
+        public int CallToRelatives(int correctAnswer)
+        {
+            int[] ratios = { 0, 0, 0, 0 };
+            if (correctAnswer < 1 || correctAnswer > 4)
+                return 0;
+
+            int maxAns = 0; //Tỷ lệ cao nhất
+            int maxAnsIndex = 1; //Vị trí đáp án có tỷ lệ cao nhất
+            Random rd = new Random();
+
+            for (int i = 1; i < 5; i++)
+            {
+                if (i == correctAnswer)
+                    ratios[i] += 30 + rd.Next(0, 100);
+                else
+                    ratios[i] += rd.Next(0, 100);
+
+                if (i == 1)
+                    maxAns = ratios[i];
+                else
+                {
+                    if (maxAns < ratios[i])
+                    {
+                        maxAns = ratios[i];
+                        maxAnsIndex = i;
+                    }
+                }
+            }
+            return maxAnsIndex;
+        }
     }
 }
